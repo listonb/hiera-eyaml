@@ -4,9 +4,11 @@ require 'rubygems'
 require 'hiera/backend/eyaml/CLI'
 require 'hiera/backend/eyaml/plugins'
 require 'hiera/backend/eyaml/encryptors/pkcs7'
+require 'hiera/backend/eyaml/encryptors/kms'
 
 # Register all plugins
 Hiera::Backend::Eyaml::Encryptors::Pkcs7.register
+Hiera::Backend::Eyaml::Encryptors::Kms.register
 Hiera::Backend::Eyaml::Plugins.find
 
 begin
